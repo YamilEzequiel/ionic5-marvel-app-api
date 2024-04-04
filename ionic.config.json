@@ -1,0 +1,7 @@
+{
+  "name": "marvelapp",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

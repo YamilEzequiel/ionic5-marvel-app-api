@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">marvelapp</string>
+    <string name="title_activity_main">marvelapp</string>
+    <string name="package_name">app.marvelapp.yamil</string>
+    <string name="custom_url_scheme">app.marvelapp.yamil</string>
+</resources>

@@ -1,0 +1,33 @@
+<ion-header [translucent]="false">
+  <ion-toolbar color="white" class="bg-primary text-white">
+    <ion-buttons slot="start">
+      <ion-menu-button color="light"></ion-menu-button>
+    </ion-buttons>
+    <ion-title translate>list.title</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-content *ngIf="!loading; else load">
+    <ion-card
+      *ngFor="let heroe of heroes"
+      class="flex gap-2"
+      (click)="goOpenHeroe(heroe)"
+    >
+      <div class="w-20 h-20 md:w-40 md:h-40 bg-cover">
+        <ion-img
+          [src]="heroe.thumbnail.path.replace('http://', 'https://') + '.' + heroe.thumbnail.extension"
+        ></ion-img>
+      </div>
+      <ion-text class="mt-8 text-l md:text-2xl">{{heroe.name}}</ion-text>
+    </ion-card>
+  </ion-content>
+  <ng-template #load>
+    <div *ngFor="let _ of 'x'.repeat(20).split('')">
+      <ion-card class="flex gap-2">
+        <div class="w-20 h-20 md:w-40 md:h-40 bg-gray-300 animate-pulse"></div>
+        <div class="mt-8 w-32 h-2 bg-gray-300 animate-pulse"></div>
+      </ion-card>
+    </div>
+  </ng-template>
+</ion-content>

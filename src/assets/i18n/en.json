@@ -1,0 +1,24 @@
+{
+  "lang": "Languaje",
+  "langs": {
+    "es": "Spanish 🇪🇸",
+    "en": "English 🇬🇧"
+  },
+  "menu": {
+    "list": "List",
+    "home": "Home"
+  },
+  "home": {
+    "title": "Home",
+    "subtitle": "The init application"
+  },
+  "list": {
+    "title": "List of superheroes",
+    "subtitle": ""
+  },
+  "detail": {
+    "comic": "Number of available comics:",
+    "serie": "Number of available series:",
+    "storie": "Number of available stories:"
+  }
+}

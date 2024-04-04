@@ -1,0 +1,39 @@
+<ion-header>
+  <ion-toolbar color="white" class="bg-primary text-white">
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>{{heroe.name}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <div class="w-64 h-64 mx-auto mt-8 max-w-64 max-h-64 mb-8">
+    <ion-img
+      class="rounded-photo focus-in max-h-64"
+      [src]="heroe.thumbnail.path.replace('http://', 'https://') + '.' + heroe.thumbnail.extension"
+    ></ion-img>
+  </div>
+  <div class="p-2 mt-6 border border-gray-400" *ngIf="heroe.description">
+    <ion-text class="font-bold text-gray-700 text-sm">
+      {{heroe.description}}
+    </ion-text>
+  </div>
+  <div
+    class="p-2 border border-gray-400 flex justify-between text-gray-700 text-sm"
+  >
+    <ion-text translate> detail.comic </ion-text>
+    <ion-text> {{heroe.comics.available}} </ion-text>
+  </div>
+  <div
+    class="p-2 border border-gray-400 flex justify-between text-gray-700 text-sm"
+  >
+    <ion-text translate> detail.serie </ion-text>
+    <ion-text> {{heroe.series.available}} </ion-text>
+  </div>
+  <div
+    class="p-2 border border-gray-400 flex justify-between text-gray-700 text-sm"
+  >
+    <ion-text translate> detail.storie </ion-text>
+    <ion-text> {{heroe.stories.available}} </ion-text>
+  </div>
+</ion-content>

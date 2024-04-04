@@ -1,0 +1,71 @@
+<ion-app>
+  <ion-split-pane contentId="main-content">
+    <ion-menu contentId="main-content" type="overlay">
+      <ion-header>
+        <ion-toolbar color="white" class="bg-primary text-white">
+          <ion-title>Menu</ion-title>
+        </ion-toolbar>
+      </ion-header>
+      <ion-content>
+        <ion-list class="bg-gray-100">
+          <ion-menu-toggle
+            auto-hide="false"
+            *ngFor="let p of appPages; let i = index"
+            class="flex flex-auto ml-4"
+          >
+            <ion-label
+              class="w-full p-1 flex justify-left cursor-pointer"
+              routerDirection="root"
+              [routerLink]="[p.url]"
+              lines="none"
+              detail="false"
+              routerLinkActive="font-bold text-cyan-600"
+            >
+              <ion-icon
+                class="p-3 rounded text-white shadow bg-primary opacity-70"
+                slot="start"
+                [ios]="p.icon + '-outline'"
+                [md]="p.icon"
+              ></ion-icon>
+              <ion-label class="ml-4 pt-2" translate>{{ p.title }}</ion-label>
+              <ion-icon
+                name="chevron-forward-outline"
+                class="absolute right-0 pt-2 mr-4 text-gray-400"
+              ></ion-icon>
+            </ion-label>
+          </ion-menu-toggle>
+          <ion-label
+            class="w-full p-1 flex justify-left cursor-pointer ml-4"
+            routerDirection="root"
+            lines="none"
+            detail="false"
+            routerLinkActive="font-bold text-cyan-600"
+          >
+            <ion-icon
+              class="p-3 rounded text-white shadow bg-primary opacity-70"
+              slot="start"
+              ios="language-outline"
+              md="language-outline"
+            ></ion-icon>
+            <ion-select
+              [(ngModel)]="browserLang"
+              (ionChange)="changeLang(browserLang)"
+            >
+              <ion-select-option translate value="es"
+                >langs.es</ion-select-option
+              >
+              <ion-select-option translate value="en"
+                >langs.en</ion-select-option
+              >
+            </ion-select>
+          </ion-label>
+        </ion-list>
+        <ion-card-content class="mt-10">
+          <p class="text-center text-sm text-gray-700 mx-auto">0.0.1</p>
+          <p class="text-center text-sm text-gray-700">Yamil Lazzari</p>
+        </ion-card-content>
+      </ion-content>
+    </ion-menu>
+    <ion-router-outlet id="main-content"> </ion-router-outlet>
+  </ion-split-pane>
+</ion-app>

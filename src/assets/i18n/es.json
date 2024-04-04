@@ -1,0 +1,24 @@
+{
+  "lang": "Idioma",
+  "langs": {
+    "es": "Español 🇪🇸",
+    "en": "Ingles 🇬🇧"
+  },
+  "menu": {
+    "list": "Listado",
+    "home": "Inicio"
+  },
+  "home": {
+    "title": "Inicio",
+    "subtitle": "Este es el inicio de la aplicación"
+  },
+  "list": {
+    "title": "Listado de superheroes",
+    "subtitle": ""
+  },
+  "detail": {
+    "comic": "Cantidad de Comics disponibles:",
+    "serie": "Cantidad de Series disponibles:",
+    "storie": "Cantidad de Stories disponibles:"
+  }
+}
