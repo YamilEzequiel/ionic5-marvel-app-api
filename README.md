@@ -14,7 +14,7 @@ https://developer.marvel.com/docs
 
 <br>
 
-<img src="https://i.ibb.co/2cNBZVH/Beige-Book-A-Class-Via-Our-App-Download-Flyer-Poster-1.png">
+<img style="width:120px" src="https://i.ibb.co/2cNBZVH/Beige-Book-A-Class-Via-Our-App-Download-Flyer-Poster-1.png">
 
 <br>
 
